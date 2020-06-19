@@ -1,0 +1,123 @@
+.informationCardContainer {
+  margin: 16px;
+}
+
+.boatContainer {
+  display: grid;
+  grid-template-columns: 414px 2fr 1fr;
+  grid-column-gap: 16px;
+  grid-template-areas:
+    "image name price"
+    "image reviews location"
+    "image skipperDetails lengthDetail"
+    "image cabinsDetails bookingDetail"
+    "image guestsDetails ."
+    "image . detailsButton";
+  margin-right: 16px;
+}
+
+.boatImageContainer {
+  display: grid;
+  grid-area: image;
+  height: 242px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "recommended favorite"
+    "back next"
+    ". .";
+}
+
+.boatRecommend {
+  grid-area: recommended;
+  color: white;
+  background-color: darkorange;
+}
+
+.boatTitleText {
+  color: deepskyblue;
+  font-size: 1em;
+  margin: 16px;
+}
+
+.boatTitleText.name {
+  grid-area: name;
+}
+
+.boatTitleText.price {
+  grid-area: price;
+  text-align: end;
+}
+
+.boatReviewsContainer {
+  display: grid;
+  grid-area: reviews;
+  grid-auto-flow: column;
+  grid-template-columns: 20px 20px 20px 20px 20px auto;
+  padding-left: 16px;
+}
+
+.boatReviewStar {
+  fill: gold !important;
+}
+
+.boatReviewReadReview {
+  color: grey;
+  font-style: italic;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.boatLocation {
+  color: grey;
+  grid-area: location;
+  text-align: end;
+}
+
+.boatDetailText.length {
+  color: black;
+  grid-area: lengthDetail;
+  text-align: end;
+}
+
+.boatDetailText.booking {
+  color: limegreen;
+  text-align: end;
+}
+
+.boatDetailsButton {
+  padding: 16px;
+  background-color: aquamarine;
+  grid-area: detailsButton;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.boatDetailContainer {
+  color: black;
+  display: grid;
+  grid-template-columns: 24px 1fr 4fr;
+  grid-column-gap: 16px;
+  margin-left: 16px;
+  align-items: center;
+}
+
+.boatDetailContainer.skipper {
+  grid-area: skipperDetails;
+}
+
+.boatDetailContainer.cabins {
+  grid-area: cabinsDetails;
+}
+
+.boatDetailContainer.guests {
+  grid-area: guestsDetails;
+}
+
+.boatDetailText {
+  font-size: 0.9em;
+  color: black;
+}

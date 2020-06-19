@@ -1,0 +1,23 @@
+.searchContainer {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto;
+  grid-auto-rows: auto 1fr;
+  grid-template-areas:
+    "header"
+    "results";
+}
+
+.resultsContainer {
+  display: grid;
+  grid-area: results;
+  max-height: 100vh;
+  overflow-x: scroll;
+}
+
+.headerContainer {
+  display: grid;
+  grid-area: header;
+}
+
+
